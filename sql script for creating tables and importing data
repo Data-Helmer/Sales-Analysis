@@ -1,0 +1,95 @@
+-- Create table for customers
+CREATE TABLE IF NOT EXISTS customers (
+    CustomerID SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    Address VARCHAR(100) NOT NULL,
+    phone VARCHAR(20) NOT NULL
+);
+
+-- Create table for vehicles
+CREATE TABLE IF NOT EXISTS vehicles (
+    VehicleID SERIAL PRIMARY KEY,
+    Make VARCHAR(50) NOT NULL,
+    Model VARCHAR(50) NOT NULL,
+    Year INTEGER NOT NULL,
+	Color VARCHAR(50) NOT NULL,
+	VIN VARCHAR(100) NOT NULL,
+	RegNumber VARCHAR(100) NOT NULL,
+	Mileage INT NOT NULL,
+	OwnerName VARCHAR(100) NOT NULL
+);
+
+-- Create table for invoices
+CREATE TABLE IF NOT EXISTS invoices (
+    InvoiceID SERIAL PRIMARY KEY,
+	InvoiceDate DATE NOT NULL,
+	Subtotal DECIMAL(20, 2) NOT NULL,
+	SalesTaxRate INT NOT NULL,
+	SalesTax DECIMAL (20, 2) NOT NULL,
+	TotalLabour DECIMAL (20, 2) NOT NULL,
+	TotalParts DECIMAL (20, 2) NOT NULL,
+	Total DECIMAL (20, 2) NOT NULL,
+    CustomerID INT,
+    VehicleID INT,
+    FOREIGN KEY (CustomerID) REFERENCES customers(CustomerID),
+    FOREIGN KEY (VehicleID) REFERENCES vehicles(VehicleID)
+);
+
+-- Create table for job
+CREATE TABLE IF NOT EXISTS job (
+    JobID SERIAL PRIMARY KEY,
+    VehicleID INT,
+    Description VARCHAR(255),
+    Hours DECIMAL(10, 2),
+    Rate DECIMAL(10, 2),
+    Amount DECIMAL(10, 2),
+    InvoiceID INT,
+    FOREIGN KEY (VehicleID) REFERENCES vehicles(VehicleID),
+    FOREIGN KEY (InvoiceID) REFERENCES invoices(InvoiceID)
+);
+
+-- Create table for parts
+CREATE TABLE IF NOT EXISTS parts (
+    PartID SERIAL PRIMARY KEY,
+    JobID INT,
+    PartNumber VARCHAR(255),
+    PartName VARCHAR(255),
+    Quantity INT,
+    UnitPrice DECIMAL(10, 2),
+    Amount DECIMAL(10, 2),
+    InvoiceID INT,
+    FOREIGN KEY (JobID) REFERENCES job(JobID),
+    FOREIGN KEY (InvoiceID) REFERENCES invoices(InvoiceID)
+);
+
+--- To import csv data
+
+-- Copy data from 'customers.csv' into the 'customers' table
+COPY customers
+FROM 'C:\Users\USER\Downloads\customers.csv'
+DELIMITER ','
+CSV HEADER;
+
+-- Copy data from 'vehicles.csv' into the 'vehicles' table
+COPY vehicles
+FROM 'C:\Users\USER\Downloads\vehicle.csv'
+DELIMITER ','
+CSV HEADER;
+
+-- Copy data from 'invoices.csv' into the 'invoices' table
+COPY invoices
+FROM 'C:\Users\USER\Downloads\invoice.csv'
+DELIMITER ','
+CSV HEADER;
+
+-- Import data into the job table
+COPY job 
+FROM 'C:\Users\USER\Downloads\job.csv'
+DELIMITER ','
+CSV HEADER;
+
+-- Import data into the parts table
+COPY parts 
+FROM 'C:\Users\USER\Downloads\parts.csv'
+DELIMITER ','
+CSV HEADER;
