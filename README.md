@@ -1,4 +1,4 @@
-##Dimensional Model Design: DA-Birdie
+##Dimensional Model Design: DA-Birdie##
 
 The tables from in this model are conceptually aligned with Kimball’s dimensional modeling
 principles and are well-suited for a data warehouse or an analytical database. They provide a
