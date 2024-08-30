@@ -1,8 +1,8 @@
 # Dimensional Model Design:
 
-The tables from in this model are conceptually aligned with Kimball’s dimensional modeling
-principles and are well-suited for a data warehouse or an analytical database. They provide a
-structured way to analyze the car repair shop’s operations comprehensively.
+## Introduction
+
+The tables form in this model are conceptually aligned with Kimball’s dimensional modeling principles and are well-suited for a data warehouse or an analytical database. They provide a structured way to analyze the car repair shop’s operations comprehensively.
 Requirements:
 The model aims to satisfy the following general needs:
 • Analyze the sales performance of our car repair centers.
