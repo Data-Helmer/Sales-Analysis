@@ -13,11 +13,11 @@ brand/model/year, and shop location.
 ## Information:
 The Model was created Using the following key Pieces of Information from the
 Sales Invoice:
-1. Customer Information:
+### 1. Customer Information:
 - Name: Identifies the customer.
 - Address: Provides geographical data for analysis.
 - Phone Number: Contact information for follow-ups and marketing.
-2. Vehicle Information:
+### 2. Vehicle Information:
 - Make: Brand of the vehicle.
 - Model: Specific model of the vehicle.
 - Year: Manufacture year of the vehicle.
@@ -26,18 +26,18 @@ Sales Invoice:
 - Registration Number: Another identifier for the vehicle.
 - Mileage: Indicates the usage of the vehicle, which can correlate with service
 needs.
-3. Jobs Performed:
+### 3. Jobs Performed:
 - Description: Details about the service performed.
 - Hours: Labor hours spent on the service.
 - Rate: Hourly rate for labor.
 - Amount: Total labor charge for the service.
-4. Parts Information:
+### 4. Parts Information:
 - Part Number: Unique identifier for the part.
 - Part Name: Descriptive name of the part.
 - Quantity: Number of parts used.
 - Unit Price: Cost per part.
 - Amount: Total charge for the parts used.
-5. Financial Information:
+### 5. Financial Information:
 - Total Labor Charges: Sum of all labor charges.
 - Total Parts Charges: Sum of all parts charges.
 - Sales Tax Rate: Tax rate applied to the sale.
