@@ -142,11 +142,16 @@ Includes date details, allowing time-based analysis of sales trends
  
 ## Summary 
 Through the design of this model, we have successfully: 
-### 1.	Identified Key Pieces of Information from the Sales Invoice: Customer details, vehicle details, service details, part details, location details, and transaction details. 
-### 2.	Identified Business Processes: Customer management, vehicle servicing, parts management, billing and invoicing, location management, and sales analysis. 
-### 3.	Declared the Grain of the Fact Table: Each row in the Fact_Sales table represents a single transaction captured by an invoice. 
-### 4.	Designed the Dimensional Model: Created an ER diagram depicting the fact table (Fact_Sales) and the associated dimension tables (Customer_Details, Vehicle_Details, Services, Parts, Location_Details, Dates). 
-### 5.	Documented the Model: Provided descriptions of each table and column along with logical explanations of the design decisions. 
+### 1.	Identified Key Pieces of Information from the Sales Invoice: 
+Customer details, vehicle details, service details, part details, location details, and transaction details. 
+### 2.	Identified Business Processes: 
+Customer management, vehicle servicing, parts management, billing and invoicing, location management, and sales analysis. 
+### 3.	Declared the Grain of the Fact Table: 
+Each row in the Fact_Sales table represents a single transaction captured by an invoice. 
+### 4.	Designed the Dimensional Model: 
+Created an ER diagram depicting the fact table (Fact_Sales) and the associated dimension tables (Customer_Details, Vehicle_Details, Services, Parts, Location_Details, Dates). 
+### 5.	Documented the Model: 
+Provided descriptions of each table and column along with logical explanations of the design decisions. 
  
 
 
