@@ -43,3 +43,7 @@ needs.
 - Sales Tax Rate: Tax rate applied to the sale.
 - Total Sales Tax: Total tax amount.
 - Total Amount: Total invoice amount (labor + parts + tax).
+
+# ER Diagram
+
+![](data_guy.jpg)
