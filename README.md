@@ -68,5 +68,7 @@ The key business processes that are relevant to the car repair shop, focusing on
 -	Invoice: capturing invoice-specific details e.g. Invoice number. 
 These dimensions are carefully chosen to allow slicing and dicing of the sales data in meaningful ways, aligning with Kimball's principle of "choosing dimensions that make sense for the business." 
 ### 4.	Designing Fact Tables: 
-The Fact_Sales table captures key metrics related to each service or part transaction, including labor charges, parts charges, sales tax, and total sales amount. This table references the dimension tables via foreign keys. 
+The Fact_Sales table captures key metrics related to each service or part transaction, including labor charges, parts charges, sales tax, and total sales amount. This table references the dimension tables via foreign keys.
+### Identifying Facts and Dimensions 
+![](tables.PNG)
 
